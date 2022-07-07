@@ -1,0 +1,33 @@
+{
+  "name": "vite-lib-treeshaking-test-1",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "ag-grid-community": "^28.0.0",
+    "ag-grid-vue3": "^28.0.0",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13",
+    "vue-tsc": "^0.38.2"
+  },
+  "types": "./dist/main.d.ts",
+  "main": "./dist/vite-lib-treeshaking-test.umd.js",
+  "module": "./dist/vite-lib-treeshaking-test.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-lib-treeshaking-test.es.js",
+      "require": "./dist/vite-lib-treeshaking-test.umd.js"
+    }
+  },
+  "files": [
+    "dist/"
+  ]
+}
